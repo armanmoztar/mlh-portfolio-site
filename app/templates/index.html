@@ -41,7 +41,7 @@
       <li>
         <strong>{{ edu.degree }}</strong><br>
         {{ edu.school }}<br>
-        <small>{{ edu.start }} – {{ edu.end }}</small>
+        <small>{{ edu.start }} - {{ edu.end }}</small>
         <br>
         <small>{{ edu.location if edu.location else '' }}</small>
         <br>
@@ -50,5 +50,20 @@
     {% endfor %}
   </ul>
 </div>
+
+<div class="work-experience">
+  <h2>Work Experience</h2>
+  {% for job in work_experience %}
+    <article class="job">
+      <h3>{{ job.role }} – {{ job.company }}</h3>
+      <p><small>{{ job.start }} → {{ job.end }}</small></p>
+            <ul class="job-bullets">
+        {% for line in job.bullets %}
+          <li>{{ line | safe }}</li>
+        {% endfor %}
+    </article>
+  {% endfor %}
+</div>
+
 
 </html>
