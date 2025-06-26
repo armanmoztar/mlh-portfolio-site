@@ -1,39 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:title" content="Personal Portfolio">
-    <meta property="og:description" content="My Personal Portfolio">
-    <meta property="og:url" content="{{ url }}">
+<!-- Profile banner -->
+<div class="profile">
+  <div id="profile-picture" class="profile-picture">
+    <img src="{{ url_for('static', filename='img/profile-picture.jpg') }}" alt="Profile picture">
+  </div>
+  <h1>{{ title }}</h1>
+</div>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-
-    <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
-    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
-    <title>{{ title }}</title>
-</head>
-
-<body>
-    <div class="profile">
-        <div id="profile-picture" class="profile-picture">
-            <img src="./static/img/profile-picture.jpg">
-        </div>
-        <h1>{{ title }}</h1>
-    </div>
-</body>
+<!-- About -->
 <div class="about-me">
   <h2>About Me</h2>
   <p>
-    Hi! My name is Arman Moztarzadeh. I'm a fourth year undergraduate student at the University of British Columbia studying mathematics and data science.  Outside of coding, I enjoy lifting, running, and playing piano.
+    Hi! My name is Arman Moztarzadeh. I’m a fourth-year undergraduate student at the University of British Columbia
+    studying mathematics and data science. Outside of coding, I enjoy lifting, running, and playing piano.
   </p>
 </div>
 
+<!-- Education -->
 <div class="education">
   <h2>Education</h2>
   <ul>
@@ -41,29 +26,28 @@
       <li>
         <strong>{{ edu.degree }}</strong><br>
         {{ edu.school }}<br>
-        <small>{{ edu.start }} - {{ edu.end }}</small>
-        <br>
-        <small>{{ edu.location if edu.location else '' }}</small>
-        <br>
-        <small>{{ edu.description if edu.description else '' }}</small>
+        <small>{{ edu.start }} – {{ edu.end }}</small><br>
+        <small>{{ edu.location or '' }}</small><br>
+        <small>{{ edu.description or '' }}</small>
       </li>
     {% endfor %}
   </ul>
 </div>
 
+<!-- Work Experience -->
 <div class="work-experience">
   <h2>Work Experience</h2>
   {% for job in work_experience %}
     <article class="job">
-      <h3>{{ job.role }} - {{ job.company }}</h3>
+      <h3>{{ job.role }} – {{ job.company }}</h3>
       <p><small>{{ job.start }} → {{ job.end }}</small></p>
-            <ul class="job-bullets">
+      <ul class="job-bullets">
         {% for line in job.bullets %}
           <li>{{ line | safe }}</li>
         {% endfor %}
+      </ul>
     </article>
   {% endfor %}
 </div>
 
-
-</html>
+{% endblock %}
