@@ -50,3 +50,17 @@ hobbies = [
     },
 ]
 
+visited_places = [
+    {"lat": 49.2827, "lng": -123.1207, "label": "Vancouver, Canada"},
+    {"lat": 44.6810, "lng": -63.7443,  "label": "Nova Scotia, Canada"},
+    {"lat": 47.6062, "lng": -122.3321, "label": "Seattle, USA"},
+    {"lat": 36.7783, "lng": -119.4179, "label": "California, USA"},
+    {"lat": 41.9028, "lng": 12.4964,   "label": "Italy"},
+    {"lat": 37.9838, "lng": 23.7275,   "label": "Greece"},
+    {"lat": 32.4279, "lng": 53.6880,   "label": "Iran"},
+    {"lat": 51.5074, "lng": -0.1278,   "label": "London, UK"},
+    {"lat": 50.0755, "lng": 14.4378,   "label": "Czech Republic"},
+    {"lat": 40.7128, "lng": -74.0060,  "label": "New York, USA"},
+    {"lat": 48.8566, "lng": 2.3522,    "label": "France"},
+]
+

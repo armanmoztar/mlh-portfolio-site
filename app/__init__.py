@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
-from .data import education, work_experience, hobbies
+from .data import education, work_experience, hobbies, visited_places
 
 load_dotenv()
 app = Flask(__name__)
@@ -15,6 +15,7 @@ def index():
         url=os.getenv("URL"),
         education=education,
         work_experience=work_experience,
+        visited_places=visited_places
     )
 
 @app.route("/hobbies", endpoint='hobbies_page')

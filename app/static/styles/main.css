@@ -184,11 +184,10 @@ body {
   line-height: 1.4;
 }
 
-/* ------------- NAV BAR ------------- */
 .nav-bar {
-  background: #1C539F;          /* same blue you used */
+  background: #1C539F;
   display: flex;
-  justify-content: center;      /* center the links */
+  justify-content: center;
   gap: 2rem;
   padding: 0.75rem 1rem;
 }
@@ -206,7 +205,6 @@ body {
   opacity: 0.8;
 }
 
-/* underline for active page */
 .nav-bar a.active::after {
   content: "";
   position: absolute;
@@ -216,6 +214,21 @@ body {
   height: 3px;
   background: #fff;
   border-radius: 2px;
+}
+
+.travel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#map {
+  height: 300px;
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
 }
 
 
