@@ -13,7 +13,7 @@
 <div class="about-me">
   <h2>About Me</h2>
   <p>
-    Hi! My name is Arman Moztarzadeh. I’m a fourth-year undergraduate student at the University of British Columbia
+    Hi! My name is Arman Moztarzadeh. I'm a fourth-year undergraduate student at the University of British Columbia
     studying mathematics and data science. Outside of coding, I enjoy lifting, running, and playing piano.
   </p>
 </div>
@@ -26,7 +26,7 @@
       <li>
         <strong>{{ edu.degree }}</strong><br>
         {{ edu.school }}<br>
-        <small>{{ edu.start }} – {{ edu.end }}</small><br>
+        <small>{{ edu.start }} - {{ edu.end }}</small><br>
         <small>{{ edu.location or '' }}</small><br>
         <small>{{ edu.description or '' }}</small>
       </li>
@@ -39,7 +39,7 @@
   <h2>Work Experience</h2>
   {% for job in work_experience %}
     <article class="job">
-      <h3>{{ job.role }} – {{ job.company }}</h3>
+      <h3>{{ job.role }} - {{ job.company }}</h3>
       <p><small>{{ job.start }} → {{ job.end }}</small></p>
       <ul class="job-bullets">
         {% for line in job.bullets %}
@@ -49,5 +49,29 @@
     </article>
   {% endfor %}
 </div>
+
+ <!-- travel section -->
+  <section class="travel">
+    <h2>Places I've Traveled</h2>
+    <div id="map"></div>
+  </section>
+</div>
+
+<!-- Leaflet assets -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  const visited = {{ visited_places | tojson }};
+  const map = L.map('map').setView([20, 0], 2);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  visited.forEach(p =>
+    L.marker([p.lat, p.lng]).addTo(map).bindPopup(p.label)
+  );
+</script>
 
 {% endblock %}
