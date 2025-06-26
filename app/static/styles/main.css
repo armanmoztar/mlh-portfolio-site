@@ -107,3 +107,17 @@ body {
   margin-bottom: 0.5rem;
   text-align: center;
 }
+
+.education {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+.education ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.education li {
+  margin-bottom: 1.5rem;
+}
+
