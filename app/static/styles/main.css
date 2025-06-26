@@ -145,4 +145,9 @@ body {
   margin-top: 0;
 }
 
+.job-bullets {
+  margin: 0.5rem 0 0 1.25rem;
+  padding-left: 0;
+  line-height: 1.4;
+}
 
