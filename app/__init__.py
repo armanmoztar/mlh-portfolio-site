@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
-from .data import education
+from .data import education, work_experience
 
 load_dotenv()
 app = Flask(__name__)
@@ -13,5 +13,6 @@ def index():
         'index.html',
         title="MLH Fellow",
         url=os.getenv("URL"),
-        education=education  
+        education=education,
+        work_experience=work_experience
     )
