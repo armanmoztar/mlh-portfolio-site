@@ -5,7 +5,8 @@ education = [
         "start": "2020",
         "end": "Expected 2026",
         "location": "Vancouver, Canada",
-        "description": "Description: Pursuing a Bachelor of Science in Mathematics with a focus on computer science and data science."
+        "description": "Description: Pursuing a Bachelor of Science in Mathematics with a focus on computer science and data science.",
+        "logo": "img/work-experience/ubc.png"
     },
 ]
 
@@ -14,22 +15,70 @@ work_experience = [
         "role": "Software Engineer Intern",
         "company": "Amazon",
         "start": "May 2025",
-        "end": "Current",
+        "end": "Aug 2025",
+        "logo": "img/work-experience/amazon.png",
         "bullets": [
-            "Working on the Deals and Promotions team to enhance the customer experience on Amazon's platform.",
+            "Returning to Amazon on International Stores."
         ],
     },
     {
         "role": "Software Engineer Intern",
         "company": "Amazon",
-        "start": "June 2024",
+        "start": "Jun 2024",
         "end": "Sep 2024",
+        "logo": "img/work-experience/amazon.png",
         "bullets": [
-            "Developed a full-stack workflow for credit card multi-factor authentication (MFA) for UK retail checkout using React, enhancing payment security by 20%",
-            "Implemented a 'checkout' use case in TypeScript for the team's testing sandbox, utilizing AWS SAM and AWS Lambda to test the workflow with various inputs",
-            "Introduced two APIs to handle payment authorization, enabling seamless experimentation with minimal disruption to the existing codebase."
+            "Developed a full-stack workflow for credit-card MFA in UK checkout (React) — boosted payment security by 20 %.",
+            "Implemented a `checkout` use case in TypeScript for the team's sandbox (AWS SAM + Lambda).",
+            "Added two payment-authorization APIs, enabling low-risk experimentation."
         ],
-    }
+    },
+    {
+        "role": "Software Engineer Intern",
+        "company": "Government of Canada",
+        "start": "Jan 2024",
+        "end": "Apr 2024",
+        "logo": "img/work-experience/government-of-canada.png",
+        "bullets": [
+            "Led development of seven Python + MongoDB features for a major infrastructure upgrade.",
+            "Queried production MongoDB to deprecate nine legacy components and modernize the stack.",
+            "Authored Confluence docs to streamline future onboarding."
+        ],
+    },
+    {
+        "role": "Undergraduate Teaching Assistant",
+        "company": "UBC",
+        "start": "Sep 2023",
+        "end": "Apr 2024",
+        "logo": "img/work-experience/ubc.png",
+        "bullets": [
+            "Built an assignment comparing AWS EMR single-node vs. multi-node clusters for big-data tasks.",
+            "Reviewed coursework on AWS, Azure, and Docker; mentored 100 + CPSC & DS students."
+        ],
+    },
+    {
+        "role": "Software Engineer in Test (Co-op)",
+        "company": "Optum",
+        "start": "May 2023",
+        "end": "Dec 2023",
+        "logo": "img/work-experience/optum.png",
+        "bullets": [
+            "Created C# + Selenium automated tests — 10 % performance gain (LoadRunner).",
+            "Provisioned VMware & GCP environments for scalable testing.",
+            "Automated log-analysis and CSV reporting with pandas / NumPy."
+        ],
+    },
+    {
+        "role": "Software Engineer Intern",
+        "company": "Porton Health",
+        "start": "Sep 2022",
+        "end": "Dec 2022",
+        "logo": "img/work-experience/porton-health.png",
+        "bullets": [
+            "Enhanced JS / Node.js apps with new features and UI improvements.",
+            "Debugged 35 + MongoDB-backed components and documented workflows."
+        ],
+    },
 ]
 
 hobbies = [
