@@ -5,7 +5,7 @@ education = [
         "start": "2020",
         "end": "Expected 2026",
         "location": "Vancouver, Canada",
-        "description": "Pursuing a Bachelor of Science in Mathematics with a focus on computer science and data science."
+        "description": "Description: Pursuing a Bachelor of Science in Mathematics with a focus on computer science and data science."
     },
 ]
 
@@ -30,5 +30,23 @@ work_experience = [
             "Introduced two APIs to handle payment authorization, enabling seamless experimentation with minimal disruption to the existing codebase."
         ],
     }
+]
+
+hobbies = [
+    {
+        "title": "Skiing",
+        "img": "img/hobbies/skiing.JPG",
+        "desc": "Favourite runs: Whistler's Peak to Creek and Grouse's Olympic.",
+    },
+    {
+        "title": "Piano",
+        "img": "img/hobbies/piano.png",
+        "desc": "Classically trained; currently learning Another Love by Tom Odell.",
+    },
+    {
+        "title": "Running",
+        "img": "img/hobbies/running.jpg",
+        "desc": "Part of the Kamino Run Club in Coquitlam, training for a sub-1:35 half-marathon.",
+    },
 ]
 

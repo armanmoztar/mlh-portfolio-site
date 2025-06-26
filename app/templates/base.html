@@ -1,0 +1,32 @@
+<!-- app/templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title or "Portfolio" }}</title>
+
+  <!-- Google Font + site CSS -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+</head>
+
+<body>
+  <nav class="nav-bar">
+    <a href="{{ url_for('index') }}"
+       class="{% if request.path == url_for('index') %}active{% endif %}">
+       Home
+    </a>
+
+    <a href="{{ url_for('hobbies_page') }}"
+       class="{% if request.path == url_for('hobbies_page') %}active{% endif %}">
+       Hobbies
+    </a>
+  </nav>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

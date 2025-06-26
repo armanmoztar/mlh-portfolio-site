@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="hobbies">
+  <h2>My Hobbies</h2>
+
+  <div class="hobby-grid">
+    {% for h in hobbies %}
+      <figure>
+        <img src="{{ url_for('static', filename=h.img) }}" alt="{{ h.title }}">
+        <figcaption>
+          <strong>{{ h.title }}</strong><br>{{ h.desc }}
+        </figcaption>
+      </figure>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
