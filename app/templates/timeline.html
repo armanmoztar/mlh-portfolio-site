@@ -22,14 +22,23 @@
             container.innerHTML = '';
             data.timeline_posts.forEach(post => {
                 const div = document.createElement('div');
+                div.id = `post-${post.id}`;
                 div.innerHTML = `
                     <hr>
                     <strong>${post.name}</strong> (${post.email})<br>
                     ${post.content}<br>
-                    <small>${post.created_at}</small>
+                    <small>${post.created_at}</small><br>
+                    <button onclick="deletePost(${post.id})">Delete</button>
                 `;
                 container.appendChild(div);
             });
+        }
+
+        async function deletePost(id) {
+            await fetch(`/api/timeline_post/${id}`, {
+                method: 'DELETE'
+            });
+            document.getElementById(`post-${id}`).remove();
         }
 
         document.getElementById('timeline-form').addEventListener('submit', async (e) => {
