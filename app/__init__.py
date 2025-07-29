@@ -65,7 +65,9 @@ def post_time_line_post():
 
     if not name:
         return "Invalid name", 400
-    if "@" not in email or not email:
+    import re
+    email_regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    if not re.match(email_regex, email):
         return "Invalid email", 400
     if not content:
         return "Invalid content", 400
