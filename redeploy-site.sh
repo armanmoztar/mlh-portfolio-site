@@ -6,13 +6,10 @@ cd /root/mlh-portfolio-site
 # Pull latest changes from GitHub
 git fetch && git reset origin/main --hard
 
-# Activate virtual env
-source python3-virtualenv/bin/activate
+# Stop Docker containers
+docker compose -f docker-compose.prod.yml down
 
-# Install Python dependencies
-pip install -r requirements.txt
+# Rebuild and start containers
+docker compose -f docker-compose.prod.yml up -d --build
 
-# Restart the systemd service
-sudo systemctl restart myportfolio
-
-echo "Site redeployed and service restarted."
+echo "Site redeployed using Docker Compose."
