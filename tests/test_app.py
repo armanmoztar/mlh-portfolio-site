@@ -16,8 +16,6 @@ class AppTestCase(unittest.TestCase):
 
     def test_timeline(self):
         response = self.client.get("/timeline")
-        print("Status Code:", response.status_code)
-        print("Response Body:", response.get_data(as_text=True))
         assert response.status_code == 200
 
     def test_malformed_timeline_post(self):
