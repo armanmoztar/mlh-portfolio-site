@@ -27,11 +27,11 @@ class TestTimelinePost(unittest.TestCase):
         assert first_post.id == 1
 
         second_post = TimelinePost.create(name='Jane Doe',
-                                          email='jame@example.com',
+                                          email='jane@example.com',
                                           content='Hello world, I\'m Jane!')
         assert second_post.id == 2
 
         posts = TimelinePost.select().order_by(TimelinePost.id)
         assert posts.count() == 2
         assert posts[0].name == 'John Doe'
-        assert posts[1].email == 'jame@example.com'
+        assert posts[1].email == 'jane@example.com'
