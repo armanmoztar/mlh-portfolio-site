@@ -21,20 +21,19 @@ services:
       - mydatabase:/var/lib/mysql
 
   nginx:
-    nginx:
-  container_name: nginx
-  image: jonasal/nginx-certbot:latest
-  restart: always
-  environment:
-    - CERTBOT_EMAIL=armanmoztar@outlook.com
-  ports:
-    - "80:80"
-    - "443:443"
-  volumes:
-    - ./user_conf.d:/etc/nginx/user_conf.d
-    - ./certs:/etc/letsencrypt
-  depends_on:
-    - myportfolio
+    container_name: nginx
+    image: jonasal/nginx-certbot:latest
+    restart: always
+    environment:
+      - CERTBOT_EMAIL=armanmoztar@outlook.com
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./user_conf.d:/etc/nginx/user_conf.d
+      - ./certs:/etc/letsencrypt
+    depends_on:
+      - myportfolio
 
 volumes:
   mydatabase:
