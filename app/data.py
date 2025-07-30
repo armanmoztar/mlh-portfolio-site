@@ -28,9 +28,9 @@ work_experience = [
         "end": "Sep 2024",
         "logo": "img/work-experience/amazon.png",
         "bullets": [
-            "Developed a full-stack workflow for credit-card MFA in UK checkout (React) — boosted payment security by 20 %.",
-            "Implemented a `checkout` use case in TypeScript for the team's sandbox (AWS SAM + Lambda).",
-            "Added two payment-authorization APIs, enabling low-risk experimentation."
+            "Developed a backend model and schema in Java to define a new query promotions API for Amazon Business customers, enabling flexible promotion data access for millions of customers.",
+            "Optimized Cross-Border Promotions query workflow for Amazon Business using AWS Lambda and API Gateway, reducing query latency by 70%",
+            "Introduced a new frontend feature to display query results and to extract data to CSV format using React and TypeScript, improving usability for 100+ internal stakeholders"
         ],
     },
     {
@@ -112,4 +112,3 @@ visited_places = [
     {"lat": 40.7128, "lng": -74.0060,  "label": "New York, USA"},
     {"lat": 48.8566, "lng": 2.3522,    "label": "France"},
 ]
-
