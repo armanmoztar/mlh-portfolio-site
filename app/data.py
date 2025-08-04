@@ -77,8 +77,8 @@ work_experience = [
         "end": "Dec 2022",
         "logo": "img/work-experience/porton-health.png",
         "bullets": [
-            "Enhanced JS / Node.js apps with new features and UI improvements.",
-            "Debugged 35 + MongoDB-backed components and documented workflows."
+            "Enhanced JS/Node.js apps with new features and UI improvements.",
+            "Debugged 35+ MongoDB-backed components and documented workflows."
         ],
     },
 ]
@@ -92,12 +92,12 @@ hobbies = [
     {
         "title": "Piano",
         "img": "img/hobbies/piano.png",
-        "desc": "Classically trained; currently learning Another Love by Tom Odell.",
+        "desc": "Enjoy playing classical and modern pieces.",
     },
     {
         "title": "Running",
         "img": "img/hobbies/running.jpg",
-        "desc": "Part of the Kamino Run Club in Coquitlam, training for a sub-1:35 half-marathon.",
+        "desc": "Part of the Kamino Run Club in Coquitlam, training for a sub-1:35 half-marathon in November.",
     },
 ]
 
