@@ -30,3 +30,6 @@ jobs:
 
       - name: Deploy site
         run: ssh my-vps '~/redeploy-site.sh'
+
+      - name: Debug Trigger
+        run: echo "Deploy triggered at $(date)"
